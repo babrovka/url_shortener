@@ -1,0 +1,2 @@
+<h2>Your shortened url:</h2>
+<%= link(@url, to: @url, target: "_blank") %>

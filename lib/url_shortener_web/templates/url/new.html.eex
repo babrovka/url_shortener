@@ -1,0 +1,7 @@
+<h2>Please, enter url:</h2>
+
+<%= form_for @changeset, Routes.url_path(@conn, :create), fn f -> %>
+  <%= text_input f, :initial, required: true, pattern: "https://.*|http://.*" %>
+
+  <%= submit "Make it short!" %>
+<% end %>

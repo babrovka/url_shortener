@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Initial url</th>
+    <th>Short url</th>
+  </tr>
+<%= for url <- @urls do %>
+  <tr>
+    <td><%= link(url.initial, to: url.initial, target: "_blank") %></td>
+    <td><%= link(@base_url <> url.short, to: url.short, target: "_blank") %></td>
+  </tr>
+<% end %>
+</table>
